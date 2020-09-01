@@ -1,0 +1,29 @@
+.task {
+
+  cursor: pointer;
+  padding: 5px;
+
+  div {
+    display: inline-block;
+  }
+
+  .title {
+    width: 90%;
+  }
+
+  .edit-task {
+    display: none;
+  }
+
+  &:hover {
+    background: var(--intermediate-blue);
+
+    .edit-task {
+      display: inline-block;
+    }
+  }
+
+  .done {
+    text-decoration: line-through;
+  }
+}
