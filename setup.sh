@@ -2,17 +2,15 @@
 
 #setup frontend requirement
 
-cd frontend
+cd server/frontend/
 
 npm install
 
-npm run build
+npm run dev
 
-cd ..
+cd ../..
 
 #setup backend requirement
-
-cd backend
 
 python3 -m venv env
 

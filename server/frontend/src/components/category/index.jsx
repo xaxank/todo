@@ -2,7 +2,7 @@ import {CloseSquareOutlined, EditOutlined} from '@ant-design/icons'
 import {Card, Input, message} from "antd";
 import React, {useEffect, useState} from 'react';
 import {deleteTaskCategory, fetchTaskList, newTask, updateCategoryName} from "../../apis/todoApis";
-import {Task} from "../task";
+import {Task} from "../task/index.jsx";
 import './category.scss';
 
 

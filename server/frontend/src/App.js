@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.scss';
-import {TodoContainer} from "./components/todoContainer";
-import 'antd/dist/antd.compact.css';
+import {TodoContainer} from "./components/todoContainer/index.jsx";
 
 // User login to do added here
 

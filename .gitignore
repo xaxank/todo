@@ -4,12 +4,16 @@
 
 */.idea/*
 
-*/node_modules/*
+node_modules
 
 */build/*
 
-*/env/*
+server/frontend/static/frontend/*
+
+env
 
 db.sqlite3
 
 */migrations/*
+
+package-lock.json

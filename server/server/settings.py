@@ -25,7 +25,7 @@ SECRET_KEY = 'n&#l+ks-(#3ic-kj44%$2$7+6f@b_(8rk1ezxdf=zjjce3nmm='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -40,7 +40,10 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'todo',
+    'frontend',
 ]
+
+
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
