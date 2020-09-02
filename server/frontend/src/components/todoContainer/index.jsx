@@ -1,7 +1,7 @@
 import {Button, Col, Layout, message, Modal, Row, Select} from "antd";
 import React, {useEffect, useState} from 'react';
 import {createNewCategory, fetchCategories} from "../../apis/todoApis";
-import {Category} from "../category";
+import {Category} from "../category/index.jsx";
 
 export const TodoContainer = () => {
     
@@ -28,7 +28,7 @@ export const TodoContainer = () => {
     }
     
     const renderCategories = () => {
-        return categories.map(item => <Col key={item.pk} sm={24} md={12} lg={8}><Category
+        return categories.map(item => <Col style={{width:"100%"}} key={item.pk} sm={24} md={12} lg={8}><Category
             callback={getCategories} {...item}/></Col>)
     }
     
@@ -36,8 +36,8 @@ export const TodoContainer = () => {
         <Layout.Header style={{position: 'fixed', zIndex: 1, width: '100%'}}>
             <NewCategoryForm saveCategory={saveCategory} categories={categories}/>
         </Layout.Header>
-        <Layout.Content style={{padding: '0 50px', marginTop: 100, minHeight: "calc(100vh - 100px)"}}>
-            <Row>
+        <Layout.Content style={{ marginTop: 100, minHeight: "calc(100vh - 100px)"}}>
+            <Row gutter={20}>
                 {renderCategories()}
             </Row></Layout.Content>
     </Layout>

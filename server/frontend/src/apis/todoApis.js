@@ -1,9 +1,10 @@
 // Category APIS
 
 import {encodeParams} from "./apiHelpers";
+const HOST_IP = window.location.hostname;
 
 export const fetchCategories = async () => {
-    const response = await fetch('http://127.0.0.1:8000/todo/api/category/');
+    const response = await fetch("http://"+HOST_IP+":8000/todo/api/category/");
     const body = await response.json();
     if (response.status >= 400) return false;
     return body;
@@ -13,7 +14,7 @@ export const fetchCategories = async () => {
 export const createNewCategory = async (params) => {
     
     try {
-        let response = await fetch('http://127.0.0.1:8000/todo/api/category/', {
+        let response = await fetch("http://"+HOST_IP+":8000/todo/api/category/", {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -39,7 +40,7 @@ export const createNewCategory = async (params) => {
 export const updateCategoryName = async (params) => {
     
     try {
-        let response = await fetch("http://127.0.0.1:8000/todo/api/category_update/", {
+        let response = await fetch("http://"+HOST_IP+":8000/todo/api/category_update/", {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -62,14 +63,14 @@ export const updateCategoryName = async (params) => {
 }
 
 export const deleteTaskCategory = async (params) => {
-    const response = await fetch("http://127.0.0.1:8000/todo/api/category_delete/?" + encodeParams(params));
+    const response = await fetch("http://"+HOST_IP+":8000/todo/api/category_delete/?" + encodeParams(params));
     const body = await response.json();
     if (response.status >= 400) return false;
     return body;
 }
 
 export const fetchTaskList = async (params) => {
-    const response = await fetch("http://127.0.0.1:8000/todo/api/task/?" + encodeParams(params));
+    const response = await fetch("http://"+HOST_IP+":8000/todo/api/task/?" + encodeParams(params));
     const body = await response.json();
     if (response.status >= 400) return false;
     return body;
@@ -78,7 +79,7 @@ export const fetchTaskList = async (params) => {
 export const newTask = async (params) => {
     
     try {
-        let response = await fetch("http://127.0.0.1:8000/todo/api/task/", {
+        let response = await fetch("http://"+HOST_IP+":8000/todo/api/task/", {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -103,7 +104,7 @@ export const newTask = async (params) => {
 export const updateTask = async (params) => {
     
     try {
-        let response = await fetch("http://127.0.0.1:8000/todo/api/task_update/", {
+        let response = await fetch("http://"+HOST_IP+":8000/todo/api/task_update/", {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -126,7 +127,7 @@ export const updateTask = async (params) => {
 }
 
 export const deleteTask = async (params) => {
-    const response = await fetch("http://127.0.0.1:8000/todo/api/task_delete/?" + encodeParams(params));
+    const response = await fetch("http://"+HOST_IP+":8000/todo/api/task_delete/?" + encodeParams(params));
     const body = await response.json();
     if (response.status >= 400) return false;
     return body;
